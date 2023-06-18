@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: #FAFAFA url(assets/desktop-light.jpg) no-repeat top center;
+}
+
+input {
+    border: 0;
+    outline: 0;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    letter-spacing: -.017rem;
+}
+
+input::placeholder {
+    color: #9495A5;
+}
+
+
+.input {
+    background-color: white;
+    width: 32.7rem;
+    border-radius: .5rem;
+    display: flex;
+    gap: 1.2rem;
+    padding: 1.4rem 0 1.4rem 2rem;
+    box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+}
+
+.header img {
+    width: 10.814rem;
+}
+
+#mode {
+    width: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 12rem 0 6rem 0;
+    align-items: center;
+}
+
+.check {
+    appearance: none;
+    border-radius: 50%;
+    border: .01rem solid silver;
+    height: 2rem;
+    width: 2rem;
+}
+
+.check:checked {
+    background-image: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+}
+
+.check:checked::after {
+    content: "";
+    display: block;
+    width: 1.9rem;
+    height: 1.9rem;
+    background: url(assets/check.svg) no-repeat center;
+}
+
+#adder {
+    background-color: white;
+    box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+    margin: 1.6rem 0 0 0;
+    border-radius: .5rem;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    border-bottom: .01rem solid #E3E4F1;
+    padding: 1.6rem 2rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #494C6B;
+    line-height: 1.2rem;
+    letter-spacing: -.017rem;
+    font-weight: 400;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.flex img {
+    width: 1.2rem;
+}
+
+.information {
+    display: flex;
+    background-color: white;
+    box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    justify-content: space-between;
+    padding: 1.6rem 2rem 2rem 2rem;
+}
+
+.information h3 {
+    color: #9495A5;
+}
+
+.hide {
+    display: none;
+}
+
+.filter {
+    background-color: white;
+    margin: 1.6rem 0 0 0;
+    padding: 1.5rem 8rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.9rem;
+    border-radius: .5rem;
+}
+
+.filter h2 {
+    color: #9495A5;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -.019rem;
+    border-radius: .5rem;
+}
+
+h1 {
+    text-decoration: line-through;
+}
+
+.active {
+    background-color: #25273D;
+    color: #C8CBE7;
+}
+
+
+@media (min-width: 768px) {
+    .header img {
+        width: 16.7rem;
+        height: auto;
+    }
+    #mode {
+        width: 2.6rem;
+        height: auto;
+    }
+    .input {
+        width: 54rem;
+        padding: 2rem 0 2rem 2.4rem;
+        gap: 2.4rem;
+    }
+    input::placeholder {
+        font-size: 1.8rem;
+    }
+    .check , .check:checked {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+    .check:checked::after {
+        width: 2.3rem;
+        height: 2.3rem;
+    }
+    #todotext {
+        width: 100%;
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+        letter-spacing: -.025rem;
+        align-self: center;
+    }
+    .flex h3 {
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+        letter-spacing: -.025rem;
+    }
+    .remove {
+        width: 1.8rem;
+        height: 1.5rem;
+        display: none;
+    }
+    .task:hover .remove {
+        display: inline-block;
+    }
+    .input input:first-of-type {
+        width: 2.625rem;
+        height: 2.4rem;
+    }
+    .task {
+        padding: 2rem 2.4rem 1.9rem 2.4rem;
+        gap: 2.4rem;
+    }
+    .filter {
+        display: none;
+    }
+    .hide {
+        display: flex;
+        gap: 1.9rem;
+    }
+    .hide h2 , .information h3  {
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        letter-spacing: -.019rem;
+        color: #9495A5;
+    }
+    .information {
+        padding: 2rem 2.4rem;
+    }
+    .hide h2 , .information h3:last-child , #mode, .check , .check:checked , .remove {
+        cursor: pointer;
+    }
+    .all:active, .actived:active, .complite:active, .all:hover, .actived:hover, .complite:hover {
+        color: #3A7CFD;
+    }
+    #clear:hover, #clear:active {
+        color: #494C6B;
+    }
+}
